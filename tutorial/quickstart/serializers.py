@@ -1,5 +1,7 @@
 from django.contrib.auth.models import User, Group
 from rest_framework import serializers
+from rest_framework.serializers import ModelSerializer
+
 from tutorial.quickstart.models import Product
 
 
@@ -17,5 +19,5 @@ class GroupSerializer(serializers.HyperlinkedModelSerializer):
 
 class ProductSerializer(ModelSerializer):
     class Meta:
-        model = Post
+        model = Product
         fields = '__all__'
